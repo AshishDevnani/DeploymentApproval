@@ -41,10 +41,16 @@
 }
     </style>
 <script>
-/* function validate(){
+ function validate(){
+	 
+	 //alert("in function() validate");
+	 
 	 email = document.getElementById("email").value;
+	 //alert("email::::"+email);
+	 
 	 password = document.getElementById("password").value;
-	
+	 //alert("password::::"+password);
+	 
 	if(email==""){
 		alert("please enter email");
 		return false;
@@ -55,8 +61,8 @@
 		return false;
 	}
 	
-	return true
-} */
+	return true 
+} 
 
 </script>
     
@@ -66,16 +72,16 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action="loginaction" method="post" >
+  <form action="loginaction" method="post" onsubmit="return validate()">
     <!-- <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name="password" class="form-control" id="password" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -84,7 +90,7 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div> -->
-    <button class="w-100 btn btn-lg btn-success" onclick="return validate()" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-success"  type="submit" >Sign in</button>
     <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> -->
   </form>
 </main>
